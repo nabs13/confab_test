@@ -1,0 +1,28 @@
+ollama:
+  base_url: http://127.0.0.1:11434
+  default_model: qwen3.5
+  timeout: 120
+
+tests:
+  categories:
+    - tool_fabrication
+    - link_verification
+    - temporal_consistency
+    - citation_fabrication
+    - self_knowledge
+    - correction_persistence
+    - number_fabrication
+  repetitions: 1
+  delay_between: 5  # seconds between prompts
+
+verifiers:
+  url_timeout: 10
+  rate_limit: 1.0  # requests per second
+
+reporting:
+  output_dir: ~/confab_test/reports
+  format: markdown
+
+logging:
+  db_path: ~/confab_test/confab_results.db
+  verbose: false
